@@ -20,10 +20,7 @@
     "strictPropertyInitialization": false,
     "noImplicitAny": false,
     "paths": {
-      "@org/federated-component": ["libs/federated-component/src/index.ts"],
-      "remote-one/Routes": [
-        "apps/remote-one/src/app/remote-entry/entry.routes.ts"
-      ]
+      "@org/federated-component": ["libs/federated-component/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
