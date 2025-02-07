@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@org/federated-component": ["libs/federated-component/src/index.ts"],
       "@org/federated-element": ["libs/federated-element/src/index.ts"],
       "remote-one/Routes": [
         "apps/remote-one/src/app/remote-entry/entry.routes.ts"
