@@ -36,7 +36,7 @@ When viewing the application at http://localhost:4200/ using the nx-19.4.4 branc
 
 ## NX 20.4.2
 
-When viewing the application at at http://localhost:4200/ using the nx-20.4.2 branch, the SimpleComponent is not rendered.
+When viewing the application at http://localhost:4200/ using the nx-20.4.2 branch, the SimpleComponent is not rendered.
 
 ![image](https://github.com/user-attachments/assets/2a83bf06-64b3-49c4-a38e-ba0fa348e20a)
 
