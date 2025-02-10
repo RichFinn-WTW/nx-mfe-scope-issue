@@ -3,9 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, NxWelcomeComponent],
-  selector: 'app-remote-one-entry',
-  template: `<app-nx-welcome></app-nx-welcome>`,
+    imports: [CommonModule, NxWelcomeComponent],
+    selector: 'app-remote-one-entry',
+    template: `<app-nx-welcome></app-nx-welcome>`
 })
 export class RemoteEntryComponent {}
