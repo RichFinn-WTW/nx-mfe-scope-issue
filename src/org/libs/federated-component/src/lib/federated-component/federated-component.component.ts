@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { loadRemoteModule } from '@nx/angular/mf';
 
 @Component({
-    selector: 'lib-federated-component',
-    imports: [CommonModule],
-    templateUrl: './federated-component.component.html',
-    styleUrl: './federated-component.component.css'
+  selector: 'lib-federated-component',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './federated-component.component.html',
+  styleUrl: './federated-component.component.css',
 })
 export class FederatedComponent implements OnInit {
   @Input()
@@ -19,18 +20,12 @@ export class FederatedComponent implements OnInit {
   component = '';
 
   @Input()
-  pagedataobject = '';
-
-  @Input()
   module = './Components';
 
   @ViewChild('placeHolder', { read: ViewContainerRef, static: true })
   viewContainer: ViewContainerRef;
 
   private remoteComponentRef: ComponentRef<any>;
-
-  @Input()
-  customProperties: { [key: string]: unknown };
 
   private componentLoaded = false;
   private foundRemote = false;
@@ -67,15 +62,6 @@ export class FederatedComponent implements OnInit {
               throw new Error(
                 'federated component: unable to create ' + this.component + ' federated component with ID: ' + this.id + '. Check that the component name is correct and that the component is exported in the remote module'
               );
-            }
-
-            if (this.pagedataobject != '') {
-              this.customProperties = window[this.pagedataobject];
-            }
-
-            //populate pass-through properties in the remote component
-            for (const property in this.customProperties) {
-              this.remoteComponentRef.instance[property] = this.customProperties[property];
             }
 
             this.componentLoaded = true;
