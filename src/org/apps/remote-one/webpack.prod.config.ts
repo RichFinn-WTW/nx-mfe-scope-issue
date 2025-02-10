@@ -2,7 +2,7 @@ import { withModuleFederation } from '@nx/module-federation/angular';
 import config from './module-federation.config';
 
 export default withModuleFederation({
-  dts: false,
+
   ...config,
   /*
    * Remote overrides for production.
@@ -14,4 +14,4 @@ export default withModuleFederation({
    *   ['app2', 'https://app2.example.com'],
    * ]
    */
-});
+}, { dts: false, });
